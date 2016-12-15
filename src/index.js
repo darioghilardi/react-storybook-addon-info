@@ -64,6 +64,7 @@ export default {
         showSource: Boolean(options.source),
         propTables: options.propTables,
         isWrapped: Boolean(options.isWrapped),
+        propTablesExclude: options.propTablesExclude,
         mtrcConf
       };
 
