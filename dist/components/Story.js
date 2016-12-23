@@ -423,18 +423,6 @@ exports.default = Story;
 
 
 Story.displayName = 'Story';
-Story.propTypes = {
-  context: _react2.default.PropTypes.object,
-  info: _react2.default.PropTypes.string,
-  propTables: _react2.default.PropTypes.arrayOf(_react2.default.PropTypes.func),
-  propTablesExclude: _react2.default.PropTypes.arrayOf(_react2.default.PropTypes.func),
-  showInline: _react2.default.PropTypes.bool,
-  showHeader: _react2.default.PropTypes.bool,
-  showSource: _react2.default.PropTypes.bool,
-  isWrapped: _react2.default.PropTypes.bool,
-  children: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.object, _react2.default.PropTypes.array]),
-  mtrcConf: _react2.default.PropTypes.object
-};
 
 Story.defaultProps = {
   showInline: false,

@@ -287,21 +287,6 @@ export default class Story extends React.Component {
 }
 
 Story.displayName = 'Story';
-Story.propTypes = {
-  context: React.PropTypes.object,
-  info: React.PropTypes.string,
-  propTables: React.PropTypes.arrayOf(React.PropTypes.func),
-  propTablesExclude: React.PropTypes.arrayOf(React.PropTypes.func),
-  showInline: React.PropTypes.bool,
-  showHeader: React.PropTypes.bool,
-  showSource: React.PropTypes.bool,
-  isWrapped: React.PropTypes.bool,
-  children: React.PropTypes.oneOfType([
-    React.PropTypes.object,
-    React.PropTypes.array,
-  ]),
-  mtrcConf: React.PropTypes.object
-};
 
 Story.defaultProps = {
   showInline: false,
