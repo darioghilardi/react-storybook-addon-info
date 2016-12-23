@@ -105,7 +105,7 @@ var stylesheet = {
   },
   header: {
     h1: {
-      margin: '20px 0 0 0',
+      margin: '0 0 0 0',
       padding: 0,
       fontSize: '35px'
     },
@@ -313,7 +313,7 @@ var Story = function (_React$Component) {
         _react2.default.createElement(
           'h1',
           { style: stylesheet.source.h1 },
-          'Story Source'
+          'Code example'
         ),
         _react2.default.createElement(
           _markdown.Pre,
@@ -327,7 +327,7 @@ var Story = function (_React$Component) {
   }, {
     key: '_getPropTables',
     value: function _getPropTables() {
-      var _this3 = this;
+      var _this4 = this;
 
       var types = new _map2.default();
 
@@ -357,8 +357,8 @@ var Story = function (_React$Component) {
         if (children.props && children.props.children) {
           extract(children.props.children);
         }
-        if (typeof children === 'string' || typeof children.type === 'string' || Array.isArray(_this3.props.propTablesExclude) && // also ignore excluded types
-          ~_this3.props.propTablesExclude.indexOf(children.type)) {
+        if (typeof children === 'string' || typeof children.type === 'string' || Array.isArray(_this4.props.propTablesExclude) && // also ignore excluded types
+        ~_this4.props.propTablesExclude.indexOf(children.type)) {
           return;
         }
         if (children.type && !types.has(children.type)) {
@@ -431,6 +431,7 @@ Story.propTypes = {
   showInline: _react2.default.PropTypes.bool,
   showHeader: _react2.default.PropTypes.bool,
   showSource: _react2.default.PropTypes.bool,
+  isWrapped: _react2.default.PropTypes.bool,
   children: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.object, _react2.default.PropTypes.array]),
   mtrcConf: _react2.default.PropTypes.object
 };
@@ -439,5 +440,6 @@ Story.defaultProps = {
   showInline: false,
   showHeader: true,
   showSource: true,
+  isWrapped: false,
   mtrcConf: {}
 };

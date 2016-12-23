@@ -49,7 +49,7 @@ const stylesheet = {
   },
   header: {
     h1: {
-      margin: '20px 0 0 0',
+      margin: '0 0 0 0',
       padding: 0,
       fontSize: '35px',
     },
@@ -197,7 +197,7 @@ export default class Story extends React.Component {
 
     return (
       <div>
-        <h1 style={stylesheet.source.h1}>Story Source</h1>
+        <h1 style={stylesheet.source.h1}>Code example</h1>
         <Pre>
         {React.Children.map(this.props.children, (root, idx) => (
           <Node key={idx} depth={0} node={root} isWrapped={this.props.isWrapped} />
